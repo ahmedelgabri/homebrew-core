@@ -17,7 +17,6 @@ class Notmuch < Formula
   depends_on "libgpg-error" => :build
   depends_on "pkg-config" => :build
   depends_on "sphinx-doc" => :build
-  depends_on "emacs"
   depends_on "glib"
   depends_on "gmime"
   depends_on "python@2"
@@ -29,9 +28,7 @@ class Notmuch < Formula
     args = %W[
       --prefix=#{prefix}
       --mandir=#{man}
-      --with-emacs
-      --emacslispdir=#{elisp}
-      --emacsetcdir=#{elisp}
+      --without-emacs
       --without-ruby
     ]
 
